@@ -13,7 +13,12 @@ class OnboardingScreen extends StatelessWidget {
         children: [
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 85),
-            child: SvgPicture.asset("assets/onboarding/landing-image.svg"),
+            child: Stack(
+              children: [
+                SvgPicture.asset("assets/onboarding/landing-image.svg"),
+                SvgPicture.asset("assets/onboarding/stars.svg"),
+              ],
+            ),
           ),
         ],
       ),
