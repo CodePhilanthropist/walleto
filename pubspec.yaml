@@ -19,4 +19,8 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/onboarding/
+    - assets/images/onboarding/
+  fonts:
+    - family: Avenir
+      fonts:
+        - asset: assets/fonts/Avenir Regular.ttf
