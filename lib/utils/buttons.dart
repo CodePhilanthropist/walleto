@@ -29,7 +29,7 @@ class GradientButton extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(radius),
         child: Material(
-          color: Colors.transparent,
+          color: const Color.fromARGB(0, 255, 0, 0),
           child: InkWell(
             onTap: () {},
             child: Container(

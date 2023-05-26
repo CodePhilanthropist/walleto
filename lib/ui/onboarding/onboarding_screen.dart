@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:walleto/utils/colors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:walleto/utils/outline_gradient_button.dart';
 import "../../utils/buttons.dart";
 
 class OnboardingScreen extends StatelessWidget {
@@ -105,11 +106,15 @@ class OnboardingScreen extends StatelessWidget {
                                 Color(0xff8247FF),
                               ],
                             ),
-                            borderGradient: RadialGradient(colors: [
-                              Color(0xffFB9F6C),
-                              Color(0xffC66CFC),
-                              Color(0xff8247FF),
-                            ]),
+                            borderGradient: LinearGradient(
+                              colors: [
+                                Color(0xffFB9F6C),
+                                Color(0xffC66CFC),
+                                Color(0xff8247FF),
+                              ],
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                            ),
                             radius: 16,
                             strokeWidth: 1,
                             child: Text(
@@ -134,6 +139,9 @@ class OnboardingScreen extends StatelessWidget {
                                     fontSize: 17,
                                     color: Colors.white,
                                   ),
+                                ),
+                                const SizedBox(
+                                  width: 6,
                                 ),
                                 SvgPicture.asset(
                                   "assets/images/onboarding/arrow-right.svg",
