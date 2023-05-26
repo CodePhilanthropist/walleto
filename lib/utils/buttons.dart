@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:walleto/utils/colors.dart';
 
 class GradientButton extends StatelessWidget {
   final Widget child;
@@ -26,17 +27,20 @@ class GradientButton extends StatelessWidget {
         borderRadius: BorderRadius.circular(radius),
         gradient: borderGradient,
       ),
-      child: Material(
-        color: Colors.transparent,
-        child: Ink(
-          decoration: BoxDecoration(
-            gradient: gradient,
-            borderRadius: BorderRadius.circular(radius),
-          ),
-          child: InkWell(
-            borderRadius: BorderRadius.circular(radius),
-            onTap: () {},
-            child: Center(child: child),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(radius),
+        child: Material(
+          color: AppColor.navyPurple,
+          child: Ink(
+            decoration: BoxDecoration(
+              gradient: gradient,
+              borderRadius: BorderRadius.circular(radius),
+            ),
+            child: InkWell(
+              borderRadius: BorderRadius.circular(radius),
+              onTap: () {},
+              child: Center(child: child),
+            ),
           ),
         ),
       ),

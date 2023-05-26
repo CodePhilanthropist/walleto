@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:walleto/utils/colors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:walleto/utils/outline_gradient_button.dart';
 import "../../utils/buttons.dart";
 
 class OnboardingScreen extends StatelessWidget {
@@ -98,15 +97,15 @@ class OnboardingScreen extends StatelessWidget {
                     SizedBox(
                       child: Row(
                         children: [
-                          const GradientButton(
+                          GradientButton(
                             gradient: LinearGradient(
                               colors: [
-                                Color(0xffFB9F6C),
-                                Color(0xffC66CFC),
-                                Color(0xff8247FF),
+                                const Color(0xffFB9F6C).withOpacity(0.2),
+                                const Color(0xffC66CFC).withOpacity(0.2),
+                                const Color(0xff8247FF).withOpacity(0.2),
                               ],
                             ),
-                            borderGradient: LinearGradient(
+                            borderGradient: const LinearGradient(
                               colors: [
                                 Color(0xffFB9F6C),
                                 Color(0xffC66CFC),
@@ -117,7 +116,7 @@ class OnboardingScreen extends StatelessWidget {
                             ),
                             radius: 16,
                             strokeWidth: 1,
-                            child: Text(
+                            child: const Text(
                               "Get Started",
                               style: TextStyle(
                                 fontFamily: "Avenir",
@@ -145,7 +144,7 @@ class OnboardingScreen extends StatelessWidget {
                                 ),
                                 SvgPicture.asset(
                                   "assets/images/onboarding/arrow-right.svg",
-                                )
+                                ),
                               ],
                             ),
                           ),
