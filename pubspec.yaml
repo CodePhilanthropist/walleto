@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_svg: ^2.0.6
+  google_fonts: ^5.0.0
   outline_gradient_button: ^2.0.1+1
 
 dev_dependencies:
